@@ -56,6 +56,22 @@
     .topbar .wrap{
       display:flex;justify-content:space-between;align-items:center;padding:.5rem 0
     }
+    .topbar .left-info{
+      display:flex;
+      align-items:center;
+      gap:1.5rem;
+    }
+    .topbar .logos{
+      display:flex;
+      align-items:center;
+      gap:1rem;
+    }
+    .topbar .logos img{
+      height:24px;
+      width:auto;
+      filter:brightness(0) invert(1);
+      opacity:0.9;
+    }
     .topbar a{color:#e2e8f0}
     .topbar .tel{font-weight:700;color:#e6f0ff}
     .topbar svg{width:18px;height:18px}
@@ -64,11 +80,9 @@
     header{border-bottom:1px solid #e5e7eb;background:#fff;position:sticky;top:0;z-index:40}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;gap:1rem}
     .brand{display:flex;align-items:center;gap:.75rem;font-weight:800;color:var(--primary-700);font-size:1.15rem}
-    .brand .logo{
-      width:42px;height:42px;border-radius:10px;
-      background:linear-gradient(135deg,var(--primary),#1C7ED6);
-      display:grid;place-items:center;color:#fff;font-weight:800;
-      box-shadow:0 6px 18px #0b5dba2e;
+    .brand .logo-img{
+      height:48px;
+      width:auto;
     }
     nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
     nav a{
@@ -122,6 +136,15 @@
       }
       .scrolling-content {
         animation-duration: 20s;
+      }
+      .topbar .wrap{
+        flex-direction:column;
+        gap:.5rem;
+        text-align:center
+      }
+      .topbar .left-info{
+        flex-direction:column;
+        gap:.5rem;
       }
     }
 
@@ -186,7 +209,6 @@
       .hamburger{display:block}
       nav ul{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid #e5e7eb;padding:1rem;flex-direction:column}
       nav ul.open{display:flex}
-      .topbar .wrap{flex-direction:column;gap:.5rem;text-align:center}
       .nav-cta{width:100%;justify-content:center}
       .btn{width:100%;justify-content:center}
     }
@@ -284,9 +306,15 @@
   <!-- Topbar -->
   <div class="topbar">
     <div class="container wrap">
-      <div>Monday – Friday: 08:30–17:30 · Saturday: 09:00–13:30 · Sunday: Closed</div>
+      <div class="left-info">
+        <div class="logos">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_AA_logo.svg/320px-The_AA_logo.svg.png" alt="AA Logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/RAC_Logo.svg/320px-RAC_Logo.svg.png" alt="RAC Logo">
+        </div>
+        <div>Foleshill: 1a Broad Street Jetty, Coventry, CV6 5BE</div>
+      </div>
       <div>
-        <a class="tel" href="tel:02476542202">024 7654 2202</a>
+        <a class="tel" href="tel:02477990062">02477 990062</a>
       </div>
     </div>
   </div>
@@ -295,7 +323,7 @@
   <header>
     <div class="container nav">
       <a class="brand" href="#home">
-        <div class="logo" aria-hidden="true">BW</div>
+        <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=200&h=100&fit=crop" alt="Binley Logo" class="logo-img">
         <span>Binley Woods Service Centre</span>
       </a>
 
@@ -314,7 +342,7 @@
       </nav>
 
       <div class="nav-cta">
-        <a class="btn" href="#book">Book Online</a>
+        <a class="btn" href="tel:02477990062">Call Now</a>
       </div>
     </div>
   </header>
@@ -351,7 +379,7 @@
         <p class="lead">Quality workmanship, clear pricing, and quick turnarounds for Coventry & Rugby. Book your MOT, service, tyres, diagnostics and more.</p>
 
         <div class="cta-row">
-          <a class="btn" href="#book" aria-label="Book your MOT now">
+          <a class="btn" href="tel:02477990062" aria-label="Book your MOT now">
             <!-- calendar icon -->
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3v4m10-4v4M3 10h18M5 8h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2Z" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/></svg>
             Book MOT – £19 with Full/Major
@@ -370,7 +398,7 @@
   <section id="services" class="section">
     <div class="container">
       <h2>Most popular</h2>
-      <p class="muted">Book online in under 60 seconds.</p>
+      <p class="muted">Call us to book your service in under 60 seconds.</p>
 
       <div class="grid cols-4" style="margin-top:1rem">
         <div class="card">
@@ -448,7 +476,7 @@
         <div class="step">
           <div class="num">1</div>
           <h3>Book</h3>
-          <p class="muted">Pick a slot online or call us.</p>
+          <p class="muted">Call us to book your service.</p>
         </div>
         <div class="step">
           <div class="num">2</div>
@@ -539,10 +567,10 @@
   <section id="book" class="section" style="background:#0f223f">
     <div class="container" style="color:#e5edff">
       <h2 style="color:#fff">Ready to book?</h2>
-      <p class="muted" style="color:#bcd0f3">Call us or use our simple online form. We'll confirm everything by text or email.</p>
+      <p class="muted" style="color:#bcd0f3">Call us to book your service. We'll confirm everything by text or email.</p>
       <div class="cta-row">
-        <a class="btn" href="tel:02476542202">Call 024 7654 2202</a>
-        <a class="btn outline" href="https://binleywoodsservicecentre.co.uk">Book online</a>
+        <a class="btn" href="tel:02477990062">Call 02477 990062</a>
+        <a class="btn outline" href="#locations">View All Locations</a>
       </div>
     </div>
   </section>
@@ -552,7 +580,10 @@
     <div class="container">
       <div class="cols">
         <div>
-          <div class="brand"><div class="logo">BW</div><span style="color:#e5edff">Binley Woods Service Centre</span></div>
+          <div class="brand">
+            <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=100&h=50&fit=crop" alt="Binley Logo" style="height:42px;width:auto;">
+            <span style="color:#e5edff">Binley Woods Service Centre</span>
+          </div>
           <p style="margin-top:.6rem;color:#9fb4d4">Quality parts, clear communication, and friendly service across Coventry & Rugby.</p>
         </div>
         <div>
